@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Create the requirements.txt file
 @"
 flask
 flask-sqlalchemy
 flask-jwt-extended
 "@ | Out-File -Encoding utf8 requirements.txt
+=======
+flask
+flask-sqlalchemy
+flask-jwt-extended
+>>>>>>> 5ddac8d2e1f12cad26e4e1597d19aa3eaea27f20
