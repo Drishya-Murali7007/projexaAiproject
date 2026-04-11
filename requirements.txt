@@ -1,0 +1,6 @@
+# Create the requirements.txt file
+@"
+flask
+flask-sqlalchemy
+flask-jwt-extended
+"@ | Out-File -Encoding utf8 requirements.txt
