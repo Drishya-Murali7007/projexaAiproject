@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import ResourceCard from '../components/ResourceCard';
 import { Search, Filter, BookOpen, Loader2, Layout, Users, Calendar, Award, ChevronRight, FileText } from 'lucide-react';
-import { getResources } from '../../../frontend-new/services/api';
+// import { getResources } from '../../../frontend-new/services/api';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 

@@ -28,12 +28,23 @@ def signup():
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
+
     username = data.get('username')
     password = data.get('password')
 
     user = User.query.filter_by(username=username).first()
+
     if not user or not check_password_hash(user.password_hash, password):
         return jsonify({'error': 'Invalid username or password'}), 401
 
     token = create_access_token(identity=user.id)
-    return jsonify({'token': token}), 200
+
+    # ✅ UPDATED RESPONSE (IMPORTANT)
+    return jsonify({
+        'message': 'Login successful',
+        'token': token,
+        'user': {
+            'id': user.id,
+            'username': user.username
+        }
+    }), 200
