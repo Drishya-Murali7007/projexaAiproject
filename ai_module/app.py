@@ -40,7 +40,7 @@ def ask_ai(question):
     You are a helpful study assistant. Use the following context to answer the student's doubt.
     Context: {context_text}
     Student Question: {question}
-    """
+    """it 
     
     response = llm.generate_content(prompt)
     return response.text
